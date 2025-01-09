@@ -1,0 +1,186 @@
+/** @format */
+
+/* Common variables */
+:root {
+	/* Colors */
+	--primary-main: #2196f3;
+	--primary-dark: #1976d2;
+	--success-main: #4caf50;
+	--success-dark: #388e3c;
+	--success-light: #e8f5e9;
+	--error-main: #f44336;
+	--error-dark: #d32f2f;
+	--error-light: #ffebee;
+	--text-primary: rgba(0, 0, 0, 0.87);
+	--text-secondary: rgba(0, 0, 0, 0.6);
+	--divider: rgba(0, 0, 0, 0.12);
+	--action-hover: rgba(0, 0, 0, 0.04);
+
+	/* Spacing */
+	--spacing-xs: 4px;
+	--spacing-sm: 8px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+
+	/* Border radius */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+
+	/* Transitions */
+	--transition-fast: 0.2s ease;
+	--transition-normal: 0.3s ease;
+	--transition-slow: 0.5s ease;
+}
+
+/* Dark theme variables */
+[data-theme='dark'] {
+	--text-primary: rgba(255, 255, 255, 0.87);
+	--text-secondary: rgba(255, 255, 255, 0.6);
+	--divider: rgba(255, 255, 255, 0.12);
+	--action-hover: rgba(255, 255, 255, 0.08);
+}
+
+/* Common animations */
+.fade-in {
+	animation: fadeIn 0.3s ease-out;
+}
+
+.slide-up {
+	animation: slideUp 0.3s ease-out;
+}
+
+/* Common transitions */
+.hover-transform {
+	transition: transform var(--transition-fast);
+}
+
+.hover-transform:hover {
+	transform: translateY(-2px);
+}
+
+/* Common button styles */
+.icon-button {
+	color: var(--text-secondary);
+	padding: var(--spacing-sm);
+	min-width: 32px;
+	height: 32px;
+	transition: color var(--transition-fast);
+}
+
+.icon-button:hover {
+	color: var(--primary-main);
+}
+
+/* Common card styles */
+.base-card {
+	border-radius: var(--radius-md);
+	transition: all var(--transition-normal);
+}
+
+.base-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Common layout styles */
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Common spacing */
+.gap-1 {
+	gap: var(--spacing-sm);
+}
+
+.gap-2 {
+	gap: var(--spacing-md);
+}
+
+.gap-3 {
+	gap: var(--spacing-lg);
+}
+
+/* Common text styles */
+.text-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text-break {
+	word-break: break-word;
+}
+
+/* Common responsive styles */
+@media (max-width: 600px) {
+	.hide-on-mobile {
+		display: none;
+	}
+}
+
+@media (min-width: 601px) {
+	.hide-on-desktop {
+		display: none;
+	}
+}
+
+/* Common keyframes */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.03);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-3px);
+	}
+	75% {
+		transform: translateX(3px);
+	}
+}
