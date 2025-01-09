@@ -62,7 +62,7 @@ src/
 1. Clone the repository:
    ```bash
    git clone https://github.com/asoron/TriviaApp.git
-   cd trivia-quiz
+   cd TriviaApp
    ```
 
 2. Install dependencies:
